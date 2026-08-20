@@ -110,6 +110,17 @@ h2 {
 
 .entry-media-video { width: 190px; }
 
+.entry-media-fig { width: 150px; }
+.entry-media-fig img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 3px;
+}
+
 .thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -198,4 +209,5 @@ footer p { margin: 0; }
   .entry { gap: 1.25rem; }
   .entry-media { width: 100px; }
   .entry-media-video { width: 140px; }
+  .entry-media-fig { width: 110px; }
 }

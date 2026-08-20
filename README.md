@@ -30,6 +30,9 @@ Personal site for Max Bennett. Plain HTML + CSS, no build step, hosted on GitHub
 - **GNM preprint**: the first publication entry has a `TODO` comment — add the
   arXiv link when the preprint is live.
 - **Adding a paper**: copy any `<div class="entry">` block in the Publications section and edit.
+  Publication thumbnails are real figures from each paper, stored locally in `images/` and
+  resized to 640px wide. They render with `object-fit: contain` so the whole figure shows.
+  The Frontiers papers are open access (CC-BY) and Max is an author on all of them.
 - **Adding a video**: copy an entry in Featured Talks & Interviews and swap the YouTube ID in
   both the link and the `i.ytimg.com/vi/<ID>/hqdefault.jpg` thumbnail. `hqdefault.jpg` always
   exists (unlike `maxresdefault.jpg`); the CSS crops its letterbox bars to 16:9. The list is ordered newest first by hand.
