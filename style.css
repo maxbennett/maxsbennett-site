@@ -110,6 +110,18 @@ h2 {
 .entry-media { flex: none; width: 150px; }
 .entry-media img { border-radius: 2px; }
 
+.entry-media-video { width: 190px; }
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 3px;
+  background: #eee;
+  transition: opacity 0.15s ease;
+}
+a:hover .thumb { opacity: 0.78; }
+
 .entry-body { flex: 1; min-width: 0; }
 
 .title {
@@ -185,4 +197,5 @@ footer p { margin: 0; }
   h1 { font-size: 2rem; }
   .entry { gap: 1.25rem; }
   .entry-media { width: 100px; }
+  .entry-media-video { width: 140px; }
 }
