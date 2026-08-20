@@ -42,13 +42,17 @@ img { max-width: 100%; display: block; }
 /* --- Intro --- */
 
 .intro {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
   margin-bottom: 3rem;
 }
 
+.intro-text { flex: 1; min-width: 0; }
+
 .intro-photo {
-  width: 180px;
-  margin: 0 auto 1.4rem;
+  flex: none;
+  width: 190px;
 }
 .intro-photo img {
   width: 100%;
@@ -183,7 +187,12 @@ footer p { margin: 0; }
 
 @media (max-width: 620px) {
   .container { padding-top: 2.5rem; }
-  .intro { margin-bottom: 2.5rem; }
+  .intro {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
   .intro-photo { width: 145px; }
   h1 { font-size: 2rem; }
   .entry { gap: 1.25rem; }
