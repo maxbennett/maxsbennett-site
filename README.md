@@ -7,7 +7,7 @@ Personal site for Max Bennett. Plain HTML + CSS, no build step, hosted on GitHub
 - `index.html` — the whole site (single page)
 - `style.css` — all styling
 - `CNAME` — tells GitHub Pages the custom domain (maxsbennett.com)
-- `Max_Bennett_CV.pdf` — linked from the hero
+- `Max_Bennett_CV.pdf` — linked from the header
 
 ## Deploy
 
@@ -20,10 +20,9 @@ Personal site for Max Bennett. Plain HTML + CSS, no build step, hosted on GitHub
 
 ## Maintenance notes
 
-- **Images**: the headshot and book cover are currently hotlinked from
-  abriefhistoryofintelligence.com. To switch to local copies, save them to an
-  `images/` folder and update the two `src` attributes in `index.html`
-  (marked with comments).
+- **Headshot**: currently hotlinked from abriefhistoryofintelligence.com. To switch to a
+  local copy, save it to `images/headshot.jpg` and update the `src` in `index.html`
+  (marked with a comment).
 - **GNM preprint**: the first publication entry has a `TODO` comment — add the
   arXiv link when the preprint is live.
-- **Adding a paper**: copy any `<li class="pub">` block in `index.html` and edit.
+- **Adding a paper**: copy any `<li>` inside `ul.refs` in `index.html` and edit.
