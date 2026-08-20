@@ -30,8 +30,10 @@ Personal site for Max Bennett. Plain HTML + CSS, no build step, hosted on GitHub
 - **GNM preprint**: the first publication entry has a `TODO` comment — add the
   arXiv link when the preprint is live.
 - **Adding a paper**: copy any `<div class="entry">` block in the Publications section and edit.
-- **Adding a video**: copy an entry from the Videos section and swap the YouTube ID in both the
-  link and the `i.ytimg.com/vi/<ID>/hqdefault.jpg` thumbnail. `hqdefault.jpg` always exists
-  (unlike `maxresdefault.jpg`); the CSS crops its letterbox bars to 16:9.
-- **Art of the Problem video**: has a `TODO` — add the year and adjust the credit line to
-  describe your actual role on it.
+- **Adding a video**: copy an entry in Featured Talks & Interviews and swap the YouTube ID in
+  both the link and the `i.ytimg.com/vi/<ID>/hqdefault.jpg` thumbnail. `hqdefault.jpg` always
+  exists (unlike `maxresdefault.jpg`); the CSS crops its letterbox bars to 16:9. Audio-only
+  items use the `thumb-audio` placeholder tile instead of an image. The list is ordered
+  newest first by hand.
+- **Verifying a YouTube ID**: `https://www.youtube.com/oembed?url=<watch-url>&format=json`
+  returns the real title and channel, and 404s if the video is gone or not embeddable.
