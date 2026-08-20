@@ -1,13 +1,13 @@
-/* maxsbennett.com — academic single-column layout.
-   Link colors follow the convention common to academic pages:
-   blue #1772d0, orange #f09228 on hover. */
+/* maxsbennett.com
+   Typography and palette follow the PT Serif / PT Sans academic style:
+   serif body, bold uppercase sans headings, no accent color — links
+   inherit the text color and are underlined. */
 
 :root {
-  --ink: #1a1a1a;
-  --muted: #767676;
-  --link: #1772d0;
-  --link-hover: #f09228;
-  --rule: #e6e6e6;
+  --ink: #222;
+  --muted: #777;
+  --rule: #e2e2e2;
+  --hover: #f7f7f7;
 }
 
 * { box-sizing: border-box; }
@@ -18,24 +18,25 @@ body {
   margin: 0;
   background: #fff;
   color: var(--ink);
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.65;
+  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
 
 .container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 4rem 1.5rem 5rem;
+  padding: 3.5rem 1.5rem 4rem;
 }
 
 a {
-  color: var(--link);
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
 }
-a:hover { color: var(--link-hover); }
+a:hover { color: #000; text-decoration-thickness: 2px; }
 
 img { max-width: 100%; display: block; }
 
@@ -50,10 +51,7 @@ img { max-width: 100%; display: block; }
 
 .intro-text { flex: 1; min-width: 0; }
 
-.intro-photo {
-  flex: none;
-  width: 190px;
-}
+.intro-photo { flex: none; width: 190px; }
 .intro-photo img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -63,133 +61,114 @@ img { max-width: 100%; display: block; }
 }
 
 h1 {
-  font-size: 2.4rem;
-  font-weight: 300;
-  letter-spacing: -0.01em;
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
   line-height: 1.1;
-  margin: 0 0 0.15em;
-}
-
-.subtitle {
-  font-size: 1.05rem;
-  font-weight: 300;
-  color: var(--muted);
-  margin: 0;
+  margin: 0 0 0.6rem;
 }
 
 .contact-links {
   font-size: 0.95rem;
-  color: var(--muted);
-  margin: 1.1rem 0 0;
+  margin: 0;
 }
 .contact-links a { white-space: nowrap; }
 
 /* --- Sections --- */
 
-section { margin-bottom: 3rem; }
+section { margin-bottom: 2.75rem; }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  margin: 0 0 1.25rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid var(--rule);
+  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 1.1rem;
 }
 
-/* --- Entry rows (books, publications) --- */
+p { margin: 0 0 0.9rem; }
+
+/* --- Entry rows: text left, media right --- */
 
 .entry {
   display: flex;
+  flex-direction: row-reverse;
   gap: 1.75rem;
-  align-items: flex-start;
-  margin-bottom: 1.75rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: 3px;
+  transition: background-color 0.13s ease;
 }
+.entry:hover { background: var(--hover); }
 
-.entry-media { flex: none; width: 150px; }
+.entry-media { flex: none; width: 175px; }
 .entry-media img { border-radius: 2px; }
 
-.entry-media-video { width: 190px; }
+.entry-body { flex: 1; min-width: 0; }
 
-.entry-media-fig { width: 150px; }
+.title {
+  font-size: 1.05rem;
+  line-height: 1.35;
+  margin-bottom: 0.2rem;
+}
+
+.authors {
+  font-size: 0.88rem;
+  margin-bottom: 0.05rem;
+}
+.authors .me { font-weight: 700; }
+
+.venue {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin-bottom: 0.15rem;
+}
+
+.entry-links { font-size: 0.88rem; }
+.entry-links span { color: #c4c4c4; margin: 0 0.15rem; }
+
+.desc {
+  font-size: 0.92rem;
+  color: #444;
+  margin: 0.4rem 0 0;
+}
+
+.aside {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0.6rem 0 0 0.75rem;
+}
+
+/* Paper figures: show the whole figure, boxed. */
 .entry-media-fig img {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: contain;
   background: #fff;
   border: 1px solid var(--rule);
-  border-radius: 2px;
   padding: 3px;
 }
 
+/* Video stills: crop YouTube's letterbox bars to 16:9. */
 .thumb {
   width: 100%;
   aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 3px;
   background: #eee;
   transition: opacity 0.15s ease;
 }
-a:hover .thumb { opacity: 0.78; }
-
-
-.entry-body { flex: 1; min-width: 0; }
-
-.title {
-  font-size: 1.12rem;
-  font-weight: 400;
-  line-height: 1.35;
-  margin-bottom: 0.15rem;
-}
-
-.authors {
-  font-size: 0.97rem;
-  margin-bottom: 0.1rem;
-}
-.authors .me { font-weight: 700; }
-
-.venue {
-  font-size: 0.97rem;
-  font-style: italic;
-  color: var(--muted);
-  margin-bottom: 0.15rem;
-}
-
-.entry-links { font-size: 0.95rem; }
-.entry-links span { color: #c4c4c4; margin: 0 0.15rem; }
-
-.desc {
-  font-size: 0.97rem;
-  color: #4a4a4a;
-  margin: 0.45rem 0 0;
-}
-
-.aside {
-  font-size: 0.97rem;
-  color: var(--muted);
-  margin: 0;
-}
-
-/* --- Simple lists (talks, interviews) --- */
-
-ul.plain {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-ul.plain li {
-  margin-bottom: 0.8rem;
-  font-size: 0.99rem;
-}
-
-ul.plain .venue-inline { color: var(--muted); }
+a:hover .thumb { opacity: 0.8; }
 
 /* --- Footer --- */
 
 footer {
   border-top: 1px solid var(--rule);
   padding-top: 1.1rem;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--muted);
 }
 footer p { margin: 0; }
@@ -205,9 +184,10 @@ footer p { margin: 0; }
     margin-bottom: 2.5rem;
   }
   .intro-photo { width: 145px; }
-  h1 { font-size: 2rem; }
-  .entry { gap: 1.25rem; }
-  .entry-media { width: 100px; }
-  .entry-media-video { width: 140px; }
-  .entry-media-fig { width: 110px; }
+  .entry {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: 0.9rem;
+  }
+  .entry-media { width: 170px; }
 }

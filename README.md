@@ -18,6 +18,14 @@ Personal site for Max Bennett. Plain HTML + CSS, no build step, hosted on GitHub
    CNAME record on `www` pointing to `maxbennett.github.io`.
 4. Once DNS verifies, tick "Enforce HTTPS" in Settings → Pages.
 
+## Style
+
+Typography and palette follow the PT Serif / PT Sans academic convention: PT Serif for body
+text, bold uppercase PT Sans for the name and section headings, and no accent color — links
+inherit the text color (`#222`) and are underlined. Entry rows put text on the left and the
+image on the right; the row highlights on hover, and both the title and the image link to
+the same destination.
+
 ## Maintenance notes
 
 - **Images**: the headshot and book cover are hotlinked from abriefhistoryofintelligence.com.
