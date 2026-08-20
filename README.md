@@ -20,9 +20,13 @@ Personal site for Max Bennett. Plain HTML + CSS, no build step, hosted on GitHub
 
 ## Maintenance notes
 
-- **Headshot**: currently hotlinked from abriefhistoryofintelligence.com. To switch to a
-  local copy, save it to `images/headshot.jpg` and update the `src` in `index.html`
-  (marked with a comment).
+- **Images**: the headshot and book cover are hotlinked from abriefhistoryofintelligence.com.
+  To switch to local copies, save them under `images/` and update the two `src` attributes in
+  `index.html` (both marked with comments). The cover is currently a 3D mockup with a lot of
+  white padding; a flat front cover would look better in the Books row.
+- **HTTPS**: the custom domain is currently served over plain HTTP — GitHub has not issued a
+  certificate for maxsbennett.com. Fix in Settings -> Pages (re-save the custom domain to
+  trigger provisioning, then tick "Enforce HTTPS").
 - **GNM preprint**: the first publication entry has a `TODO` comment — add the
   arXiv link when the preprint is live.
-- **Adding a paper**: copy any `<li>` inside `ul.refs` in `index.html` and edit.
+- **Adding a paper**: copy any `<div class="entry">` block in the Publications section and edit.

@@ -11,115 +11,153 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://maxsbennett.com" />
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='4' y='46' font-family='Georgia,serif' font-size='44'%3EM%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext x='4' y='48' font-family='Helvetica,Arial,sans-serif' font-weight='300' font-size='46'%3EM%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main>
+  <div class="container">
 
-    <header>
-      <!-- Headshot is hotlinked from abriefhistoryofintelligence.com for now.
-           To use a local image later: save it as images/headshot.jpg and change src. -->
-      <img class="headshot"
-        src="https://images.squarespace-cdn.com/content/v1/64a2056d0a5cb90b5f685356/1d264385-fd0d-4332-ac74-13cd536dc7e2/Max+Bennett-87+%281%29+%281%29.jpg?format=750w"
-        alt="Max Bennett" />
-      <div>
+    <header class="intro">
+      <div class="intro-text">
         <h1>Max Bennett</h1>
-        <p class="affil">PhD candidate, Department of Computer Science, Columbia University</p>
-        <p class="links">
-          <a href="mailto:max.bennett@columbia.edu">max.bennett@columbia.edu</a> ·
-          <a href="Max_Bennett_CV.pdf">CV</a> ·
-          <a href="https://scholar.google.com/citations?user=6eNaCEEAAAAJ">Google&nbsp;Scholar</a> ·
-          <a href="https://x.com/maxsbennett">X</a> ·
+        <p class="subtitle">PhD candidate in Computer Science, Columbia University</p>
+        <p>
+          I work on neural memory and continual learning, advised by
+          <a href="https://www.cs.columbia.edu/~zemel/">Rich Zemel</a>. My current research
+          is on memory systems for language models that can be instructed, in natural
+          language, what to learn and what to retain. Previously I worked in evolutionary
+          neuroscience, on what the 600-million-year history of brains can tell us about
+          building intelligent machines.
+        </p>
+        <p>
+          I also cofounded <a href="https://www.bluecore.com">Bluecore</a>, where I am Chief
+          Product Officer, and Alby AI, acquired by Bluecore in 2024. I serve on the board of
+          the <a href="https://thousandbrains.org">Thousand Brains Project</a>.
+        </p>
+        <p class="contact-links">
+          <a href="mailto:max.bennett@columbia.edu">Email</a> /
+          <a href="Max_Bennett_CV.pdf">CV</a> /
+          <a href="https://scholar.google.com/citations?user=6eNaCEEAAAAJ">Google Scholar</a> /
+          <a href="https://x.com/maxsbennett">X</a> /
           <a href="https://www.linkedin.com/in/bennettmax/">LinkedIn</a>
         </p>
+      </div>
+      <div class="intro-photo">
+        <!-- Headshot is hotlinked from abriefhistoryofintelligence.com for now.
+             To use a local image later: save it as images/headshot.jpg and change src. -->
+        <img
+          src="https://images.squarespace-cdn.com/content/v1/64a2056d0a5cb90b5f685356/1d264385-fd0d-4332-ac74-13cd536dc7e2/Max+Bennett-87+%281%29+%281%29.jpg?format=750w"
+          alt="Max Bennett" />
       </div>
     </header>
 
     <section>
-      <p>
-        I am a PhD candidate in computer science at Columbia University, advised by Rich Zemel.
-        I work on neural memory and continual learning — in particular, memory systems for
-        language models that can be instructed, in natural language, what to learn and what to
-        retain. Before this, my research was in evolutionary neuroscience, asking what the
-        600-million-year history of brains can tell us about building intelligent machines.
-      </p>
-      <p>
-        I also cofounded <a href="https://www.bluecore.com">Bluecore</a>, where I am Chief Product
-        Officer, and Alby AI, acquired by Bluecore in 2024. I serve on the board of the Thousand
-        Brains Project.
-      </p>
-    </section>
-
-    <section>
       <h2>Books</h2>
-      <ul class="plain">
-        <li>
-          <em>A Brief History of Intelligence: Evolution, AI, and the Five Breakthroughs That Made
-          Our Brains.</em> Mariner Books, 2023.
-          <span class="note">
-            <a href="https://www.abriefhistoryofintelligence.com">Book site</a> ·
+      <div class="entry">
+        <div class="entry-media">
+          <!-- Cover art hotlinked from the book site; swap for a local
+               images/cover.jpg (a flat front cover would look better than this 3D mockup). -->
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/64a2056d0a5cb90b5f685356/6a3e7522-4699-4e24-b333-dada71d28876/ebook-mockup-in-an-angled-position-over-a-flat-backdrop-a9915+%282%29.png?format=750w"
+            alt="A Brief History of Intelligence" />
+        </div>
+        <div class="entry-body">
+          <div class="title">A Brief History of Intelligence</div>
+          <div class="authors">Evolution, AI, and the Five Breakthroughs That Made Our Brains</div>
+          <div class="venue">Mariner Books, 2023</div>
+          <div class="entry-links">
+            <a href="https://www.abriefhistoryofintelligence.com">Book site</a> <span>/</span>
             <a href="https://www.amazon.com/Brief-History-Intelligence-Humans-Breakthroughs/dp/0063286343">Amazon</a>
-          </span>
-        </li>
-        <li>A second book is in progress.</li>
-      </ul>
+          </div>
+          <p class="desc">
+            A history of the five evolutionary breakthroughs that produced human
+            intelligence, and what they suggest about building artificial intelligence.
+          </p>
+        </div>
+      </div>
+      <p class="aside">A second book is in progress.</p>
     </section>
 
     <section>
       <h2>Publications</h2>
-      <ul class="plain refs">
-        <li>
+
+      <div class="entry">
+        <div class="entry-body">
           <!-- TODO: add the arXiv link once the preprint is live -->
-          Bennett, M. S., Zollo, T., &amp; Zemel, R. Tell me what to learn: generalizing neural
-          memory to be controllable in natural language. <em>Preprint</em>, 2026.
-          <span class="note">Workshop poster, CATS @ ICML 2026.</span>
-        </li>
-        <li>
-          Bennett, M. S. Five breakthroughs: a first approximation of brain evolution from early
-          bilaterians to humans. <em>Frontiers in Neuroanatomy</em>, 2021.
-          <span class="note"><a href="https://doi.org/10.3389/fnana.2021.693346">doi:10.3389/fnana.2021.693346</a></span>
-        </li>
-        <li>
-          Bennett, M. S. What behavioral abilities emerged at key milestones in human brain
-          evolution? 13 hypotheses on the 600-million-year phylogenetic history of human
-          intelligence. <em>Frontiers in Psychology</em>, 2021.
-          <span class="note"><a href="https://doi.org/10.3389/fpsyg.2021.685853">doi:10.3389/fpsyg.2021.685853</a></span>
-        </li>
-        <li>
-          Worden, R., Bennett, M. S., &amp; Neacsu, V. The thalamus as a blackboard for perception
-          and planning. <em>Frontiers in Behavioral Neuroscience</em>, 2021.
-          <span class="note"><a href="https://doi.org/10.3389/fnbeh.2021.633872">doi:10.3389/fnbeh.2021.633872</a></span>
-        </li>
-        <li>
-          Bennett, M. S. An attempt at a unified theory of the neocortical microcircuit in sensory
-          cortex. <em>Frontiers in Neural Circuits</em>, 2020.
-          <span class="note"><a href="https://doi.org/10.3389/fncir.2020.00040">doi:10.3389/fncir.2020.00040</a></span>
-        </li>
-      </ul>
+          <div class="title">Tell Me What To Learn: Generalizing Neural Memory to be Controllable in Natural Language</div>
+          <div class="authors"><span class="me">Max S. Bennett</span>, Tom Zollo, Rich Zemel</div>
+          <div class="venue">Preprint, 2026. Workshop poster, CATS @ ICML 2026.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-body">
+          <div class="title"><a href="https://doi.org/10.3389/fnana.2021.693346">Five Breakthroughs: A First Approximation of Brain Evolution From Early Bilaterians to Humans</a></div>
+          <div class="authors"><span class="me">Max S. Bennett</span></div>
+          <div class="venue">Frontiers in Neuroanatomy, 2021</div>
+          <div class="entry-links"><a href="https://doi.org/10.3389/fnana.2021.693346">DOI</a></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-body">
+          <div class="title"><a href="https://doi.org/10.3389/fpsyg.2021.685853">What Behavioral Abilities Emerged at Key Milestones in Human Brain Evolution? 13 Hypotheses on the 600-Million-Year Phylogenetic History of Human Intelligence</a></div>
+          <div class="authors"><span class="me">Max S. Bennett</span></div>
+          <div class="venue">Frontiers in Psychology, 2021</div>
+          <div class="entry-links"><a href="https://doi.org/10.3389/fpsyg.2021.685853">DOI</a></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-body">
+          <div class="title"><a href="https://doi.org/10.3389/fnbeh.2021.633872">The Thalamus as a Blackboard for Perception and Planning</a></div>
+          <div class="authors">Robert Worden, <span class="me">Max S. Bennett</span>, Vlad Neacsu</div>
+          <div class="venue">Frontiers in Behavioral Neuroscience, 2021</div>
+          <div class="entry-links"><a href="https://doi.org/10.3389/fnbeh.2021.633872">DOI</a></div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-body">
+          <div class="title"><a href="https://doi.org/10.3389/fncir.2020.00040">An Attempt at a Unified Theory of the Neocortical Microcircuit in Sensory Cortex</a></div>
+          <div class="authors"><span class="me">Max S. Bennett</span></div>
+          <div class="venue">Frontiers in Neural Circuits, 2020</div>
+          <div class="entry-links"><a href="https://doi.org/10.3389/fncir.2020.00040">DOI</a></div>
+        </div>
+      </div>
     </section>
 
     <section>
-      <h2>Selected talks</h2>
+      <h2>Selected Talks</h2>
       <ul class="plain">
-        <li>Keynote, Cosyne (Computational and Systems Neuroscience), Montreal, 2024. The five
-          breakthroughs in the 600-million-year evolution of human intelligence.</li>
-        <li>NAISys, Cold Spring Harbor Laboratory, 2024. How NeuroAI can benefit from evolutionary
-          neuroscience.</li>
-        <li>Goldlab Symposium, University of Colorado Boulder, 2024. The evolution of human
-          intelligence.</li>
+        <li>
+          The Five Breakthroughs in the 600-Million-Year Evolution of Human Intelligence.
+          <span class="venue-inline">Keynote, Cosyne, Montreal, 2024.</span>
+        </li>
+        <li>
+          How NeuroAI Can Benefit From Evolutionary Neuroscience.
+          <span class="venue-inline">NAISys, Cold Spring Harbor Laboratory, 2024.</span>
+        </li>
+        <li>
+          The Evolution of Human Intelligence.
+          <span class="venue-inline">Goldlab Symposium, University of Colorado Boulder, 2024.</span>
+        </li>
       </ul>
     </section>
 
     <section>
       <h2>Interviews</h2>
       <ul class="plain">
-        <li><a href="https://www.youtube.com/watch?v=Gt386yZZx5I">Brain Inspired</a>, with Paul Middlebrooks, 2023.</li>
-        <li><a href="https://www.youtube.com/watch?v=sscaPRtf9XQ">Armchair Expert</a>, with Dax Shepard, 2024.</li>
-        <li><a href="https://loveandphilosophy.com/beyond-dichotomy-podcast/human-intelligenc-artificial-intelligence-and-evolution-with-max-bennett">Love &amp; Philosophy</a>, 2024.</li>
-        <li><a href="https://newbooksnetwork.com/a-brief-history-of-intelligence">New Books Network</a>, 2024.</li>
-        <li><a href="https://podcasts.apple.com/us/podcast/max-bennett-on-a-brief-history-of-intelligence/id1796494444?i=1000692393812">The Orthogonal Bet</a>, with Samuel Arbesman, 2025.</li>
+        <li><a href="https://www.youtube.com/watch?v=Gt386yZZx5I">Brain Inspired</a> <span class="venue-inline">with Paul Middlebrooks, 2023.</span></li>
+        <li><a href="https://www.youtube.com/watch?v=sscaPRtf9XQ">Armchair Expert</a> <span class="venue-inline">with Dax Shepard, 2024.</span></li>
+        <li><a href="https://loveandphilosophy.com/beyond-dichotomy-podcast/human-intelligenc-artificial-intelligence-and-evolution-with-max-bennett">Love &amp; Philosophy</a> <span class="venue-inline">2024.</span></li>
+        <li><a href="https://newbooksnetwork.com/a-brief-history-of-intelligence">New Books Network</a> <span class="venue-inline">2024.</span></li>
+        <li><a href="https://podcasts.apple.com/us/podcast/max-bennett-on-a-brief-history-of-intelligence/id1796494444?i=1000692393812">The Orthogonal Bet</a> <span class="venue-inline">with Samuel Arbesman, 2025.</span></li>
       </ul>
     </section>
 
@@ -127,6 +165,6 @@
       <p>max.bennett@columbia.edu</p>
     </footer>
 
-  </main>
+  </div>
 </body>
 </html>
