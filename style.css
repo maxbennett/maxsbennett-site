@@ -94,6 +94,7 @@ p { margin: 0 0 0.9rem; }
 /* --- Entry rows: text left, media right --- */
 
 .entry {
+  position: relative;
   display: flex;
   flex-direction: row-reverse;
   gap: 1.75rem;
@@ -116,11 +117,26 @@ p { margin: 0 0 0.9rem; }
   margin-bottom: 0.2rem;
 }
 
+/* The title link covers the whole row, so clicking anywhere in the row
+   follows it. Titles drop their underline because the row's hover tint
+   and the pointer cursor already signal that it is clickable. Links in
+   running prose keep their underline -- with no accent color, it is the
+   only thing that marks them. */
+.title a { text-decoration: none; }
+.title a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* Anything else clickable in the row has to sit above that overlay. */
+.entry-links a,
+.entry-media a { position: relative; }
+
 .authors {
   font-size: 0.88rem;
   margin-bottom: 0.05rem;
 }
-.authors .me { font-weight: 700; }
 
 .venue {
   font-size: 0.88rem;

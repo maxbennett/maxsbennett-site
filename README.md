@@ -23,8 +23,13 @@ Personal site for Max Bennett. Plain HTML + CSS, no build step, hosted on GitHub
 Typography and palette follow the PT Serif / PT Sans academic convention: PT Serif for body
 text, bold uppercase PT Sans for the name and section headings, and no accent color — links
 inherit the text color (`#222`) and are underlined. Entry rows put text on the left and the
-image on the right; the row highlights on hover, and both the title and the image link to
-the same destination.
+image on the right. The title link is stretched over the whole row with an `::after` overlay,
+so clicking anywhere in the row follows it; the row tints on hover. Anything else clickable
+inside a row (the Amazon link, the image) needs `position: relative` to sit above that overlay.
+
+Entry titles are not underlined -- the hover tint and pointer cursor carry the affordance.
+Links in running prose keep their underline: with no accent color, it is the only thing that
+distinguishes them from surrounding text.
 
 ## Maintenance notes
 
